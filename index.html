@@ -45,6 +45,7 @@ h3{font:700 1.2rem var(--head);margin:0 0 .5rem}
 .two{display:grid;gap:2.5rem;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))}
 .two p{margin:0 0 1rem;max-width:34rem}
 .list{margin:0;padding-left:1.1rem;color:var(--muted)}.list li{margin:0 0 .4rem}
+.steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(11rem,1fr))}.steps li{counter-increment:s;border-top:3px solid var(--accent);padding-top:.8rem}.steps li::before{content:counter(s,decimal-leading-zero);display:block;font:700 .9rem var(--head);color:var(--accent);margin-bottom:.3rem}.steps b{display:block;font:700 1.05rem var(--head)}.steps span{color:var(--muted);font-size:.97rem}.eyebrow{font:500 .8rem var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 .6rem}.card{background:var(--surface);padding:1.5rem;border-radius:8px}.card p{margin:0;color:var(--muted)}
 .note{background:var(--surface);border-left:4px solid var(--accent);padding:1.5rem;border-radius:0 6px 6px 0}
 .note p{margin:0}
 footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-size:.95rem}
@@ -56,27 +57,56 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
 <header>
   <div class="wrap">
     <a class="logo" href="#top">Arikatech</a>
-    <nav aria-label="Main"><a href="#services">Services</a><a href="#clients">Who we serve</a><a href="#approach">Approach</a><a href="#contact">Contact</a></nav>
+    <nav aria-label="Main"><a href="#services">Services</a><a href="#approach">Approach</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
   </div>
 </header>
 <main id="top">
   <div class="wrap hero">
+    <p class="eyebrow">Veeva Vault consulting for life sciences</p>
     <h1>Veeva Vault, implemented and supported for life sciences.</h1>
-    <p class="lead">Arikatech helps pharmaceutical, biotech and life science service companies implement Veeva Vault, keep it compliant, and get reliable support after go-live.</p>
+    <p class="lead">Arikatech helps pharmaceutical, biotech and life science service companies implement Veeva Vault, keep it audit-ready, and get dependable support after go-live.</p>
     <a class="btn" href="#contact">Discuss your Vault project</a>
   </div>
 
   <section id="services">
     <div class="wrap">
-      <h2>Implementation and managed support</h2>
+      <p class="eyebrow">Vault Quality</p>
+      <h2>Quality Cloud: our core expertise</h2>
       <div class="grid">
-        <div><h3>Vault implementation</h3><p>Requirements, configuration and go-live for Vault Quality (QMS, QualityDocs, Training), with PromoMats and RIM as needed.</p></div>
-        <div><h3>Managed support</h3><p>Ongoing administration, user and access management, issue resolution and release-readiness support, agreed against clear response times.</p></div>
-        <div><h3>Configuration and enhancements</h3><p>Lifecycles, workflows, document types, reports and dashboards adjusted as your processes change.</p></div>
-        <div><h3>Validation and compliance</h3><p>Validation documentation and change control that fit GxP and 21 CFR Part 11 expectations.</p></div>
-        <div><h3>Migration and integration</h3><p>Moving legacy documents and records into Vault, and connecting Vault to the systems around it.</p></div>
-        <div><h3>Training and adoption</h3><p>Role-based training and guides so users follow the process in the system.</p></div>
+        <div class="card"><h3>QualityDocs</h3><p>Controlled document management for SOPs, policies and specifications: document types, lifecycles, periodic review and distribution, built for GxP compliance.</p></div>
+        <div class="card"><h3>QMS</h3><p>Design, configuration and support for deviations, CAPA, change control, complaints, audits and more, with workflows that match how your quality team actually works.</p></div>
+        <div class="card"><h3>Training</h3><p>Training management that works: curricula, role-based assignments, GxP and non-GxP separation, and clean migration of historical training records.</p></div>
       </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p class="eyebrow">Beyond Quality</p>
+      <h2>Regulatory, commercial content and ongoing support</h2>
+      <div class="grid">
+        <div><h3>Regulatory (RIM)</h3><p>Support for registrations, submissions and regulatory content in Vault RIM.</p></div>
+        <div><h3>Commercial content (PromoMats)</h3><p>Review and approval workflows for promotional and medical content.</p></div>
+        <div><h3>Managed services</h3><p>Administration, user and access management, issue resolution, enhancements and release-readiness support under an agreed service level.</p></div>
+        <div><h3>Validation and compliance</h3><p>Validation documentation and change control aligned to GxP and 21 CFR Part 11 expectations.</p></div>
+        <div><h3>Migration and integration</h3><p>Moving legacy documents, records and training data into Vault, and connecting Vault to surrounding systems.</p></div>
+        <div><h3>Process improvement</h3><p>Reviewing existing workflows against current industry practice and simplifying where governance is heavier than it needs to be.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach">
+    <div class="wrap">
+      <p class="eyebrow">How we work</p>
+      <h2>Every engagement starts with an assessment</h2>
+      <p class="lead">We talk to your users, review your current setup and workflows, and then tailor the work to what you need, not a fixed package.</p>
+      <ol class="steps">
+        <li><b>Assess</b><span>Stakeholder interviews, current-state review, risks and gaps.</span></li>
+        <li><b>Design</b><span>Requirements, process maps and a configuration plan you approve.</span></li>
+        <li><b>Build</b><span>Configuration in sandbox, reviewed with your team each sprint.</span></li>
+        <li><b>Test and train</b><span>SIT and UAT support, validation, and role-based training.</span></li>
+        <li><b>Go live and support</b><span>Cutover, hypercare, then ongoing managed support.</span></li>
+      </ol>
     </div>
   </section>
 
@@ -84,25 +114,26 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
     <div class="wrap two">
       <div>
         <h2>Who we work with</h2>
-        <p>We work with teams that run regulated processes and need their Vault to hold up in an audit.</p>
+        <p>Teams that run regulated processes and need their Vault to hold up in an audit.</p>
       </div>
       <ul class="list">
         <li>Pharmaceutical and biotech companies</li>
         <li>Medical device and consumer health companies</li>
-        <li>Contract research, development and manufacturing organisations</li>
-        <li>Life science service and consulting companies</li>
+        <li>Generics, biosimilars and specialty pharma</li>
+        <li>CROs, CDMOs and life science service companies</li>
       </ul>
     </div>
   </section>
 
-  <section id="approach">
+  <section id="about">
     <div class="wrap two">
       <div>
-        <h2>How we work</h2>
-        <p>We start with a short assessment of your processes and current Vault setup, then agree scope, timeline and price before configuration begins.</p>
-        <p>You review working configuration in each sprint. After go-live, the same team supports the system, so knowledge of your Vault stays in one place.</p>
+        <p class="eyebrow">About</p>
+        <h2>Led by a hands-on Veeva Vault specialist</h2>
+        <p>Arikatech is led by Ajeet Kumar, a Veeva Vault consultant with a decade of experience across quality, regulatory and document management in the pharmaceutical industry. He holds the Veeva Vault Platform Administrator certification.</p>
+        <p>His work spans nine global pharma organisations, from innovator and consumer health to generics and specialty pharma, almost always on one common platform: Veeva Vault. That experience shapes how Arikatech designs processes: compliant first, and simple enough that people actually use them.</p>
       </div>
-      <div class="note"><p>Every configuration change is documented and traceable, so audits and release reviews start from facts, not memory.</p></div>
+      <div class="note"><p>Science, people, technology: our goal is compliant, efficient systems that help get high-quality medicines to patients.</p></div>
     </div>
   </section>
 
@@ -115,7 +146,7 @@ footer{border-top:1px solid var(--line);padding:2rem 0;color:var(--muted);font-s
   </section>
 </main>
 <footer>
-  <div class="wrap">&copy; <span id="y">2026</span> Arikatech. Veeva and Vault are trademarks of Veeva Systems Inc. Arikatech is an independent company.</div>
+  <div class="wrap">&copy; <span id="y">2026</span> Arikatech. Veeva and Vault are trademarks of Veeva Systems Inc. Arikatech is an independent company and is not affiliated with or endorsed by Veeva Systems.</div>
 </footer>
 <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
 </body>
